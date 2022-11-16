@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+    <style>
+        body:after {
+            content:"Tear along perforated line";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            border-left: 1px dashed #444; /*change these values to suit your liking*/
+        }
+
+        body:after {
+            content:"";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            right: 50px;
+            border-right: 1px dashed #444; /*change these values to suit your liking*/
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .vertical-right{
+        /* -ms-transform: rotate(270deg);
+        background-color: yellow;
+        transform: rotate(270deg); */
+        position: absolute;
+        z-index: 1;
+        top: 25%;
+        bottom: 0;
+        right: 0;
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        }
+
+        .first-page{
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .vr-text-upper{
+            position: absolute;
+            font-size: 15px;
+            z-index: 2;
+            top: 40%;
+            bottom: 0;
+            right: 50px;
+            writing-mode: vertical-rl;
+        }
+
+        .vr-text-footer{
+            position: absolute;
+            font-size: 15px;
+            z-index: 2;
+            top: 75%;
+            bottom: 0;
+            right: 50px;
+            writing-mode: vertical-rl;
+        }
+
+        .top-line{
+            text-align: center;
+            font-size: small;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .header{
+            display: flex;
+            justify-items: baseline;
+        }
+
+        .tata-logo{
+            width: 100px;
+            margin-top: 60px;
+            margin-left: 90px;
+        }
+
+        .header-text{
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 330px;
+        }
+
+        .header-top{
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .header-middle{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .header-bottom{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .row{
+            display: flex;
+        }
+
+        .row-website{
+            display: flex;
+            align-items: center;
+        }
+
+        .column-page-1{
+            flex: 50%;
+            margin-left: 70px;
+            line-height: 30px;
+        }
+
+        .page1-details{
+            /* margin-left: 90px; */
+        }
+
+        .column-page-1-website{
+            flex: 49%;
+            /* margin-left: -350px; */
+            line-height: 30px;
+        }
+
+        .column-page-1-website-line{
+            flex: 2%;
+        }
+
+        .tata-website-logo{
+            width: 230px;
+            margin-left: 15px;
+            margin-top: 30px;
+            /* margin-right: -350px; */
+        }
+
+        .tata-extended-logo-parts{
+            width: 35px;
+            margin-left: 7px;
+            margin-top: -20px;
+        }
+
+        .first-part{
+            margin-left: 22px;
+        }
+
+        .website-vr{
+            border-left: 3px solid;
+            height: 90px;
+            /* display: inline; */
+            margin-left: 15px;
+            /* margin-right: 5px; */
+            margin-top: 15px;
+        }
+
+        .website-think-ahead{
+            /* display: inline; */
+            font-size: 25px;
+            font-style: italic;
+            margin-left: 15px;
+        }
+
+        .page-middle{
+            min-height: 40px;
+        }
+
+        .mobile{
+            margin-top: 185px;
+        }
+
+        .page-bottom{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin-top: 200px;
+            margin-bottom: -200px;
+        }
+
+        .footer-page1{
+            margin-top: 350px;
+        }
+
+        .warn-text{
+            text-align: center;
+            font-size: 12px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .footer-pink{
+            background: pink;
+            padding-left: 51px;
+            padding-right: 70px;
+            padding-bottom: 10px;
+        }
+
+        .footer-header{
+            text-align: center;
+        }
+
+        .header-head{
+            font-weight: bold;
+        }
+
+        .footer-header-text{
+            font-size: 11.2px;
+            /* margin-top: -5px; */
+        }
+
+        .white-box{
+            background-color: #fff;
+            margin-top: 10px;
+            padding: 3px 5px;
+        }
+
+        .payment-imp{
+            font-weight: bold;
+            /* margin-top: 3px; */
+        }
+
+        .pan-text{
+            padding-bottom: 14px;
+        }
+
+        .aml-text{
+            margin-top: 3px;
+            text-align: justify;
+        }
+
+        .aml-head{
+            font-size: 11.4px;
+        }
+
+        .aml-blanks{
+            margin-top: 5px;
+        }
+
+        .blank{
+            margin-left: 50px;
+        }
+
+        .laws{
+            margin-top: 10px;
+        }
+
+        .laws-header{
+            font-weight: bold;
+            font-size: 11.4px;
+        }
+
+        .laws-points{
+            text-align: justify;
+        }
+
+        .footer-table{
+            text-align: left;
+        }
+
+        table{
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        .page-footer{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .page-footer-head{
+            font-size: 12.5px;
+            font-weight: bold;
+        }
+
+
+
+        .second-page{
+            /* height: 100%;
+            min-height: 100%; */
+            margin-top: 60px;
+        }
+
+        .dotted-page2-first{
+            content:"Tear along perforated line";
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            top: 100%;
+            bottom: 0;
+            left: 50px;
+            border-left: 1px dashed #444; /*change these values to suit your liking*/
+        }
+
+        .dotted-page2-second{
+            content:"";
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            top: 100%;
+            bottom: 0;
+            right: 50px;
+            border-right: 1px dashed #444; /*change these values to suit your liking*/
+        }
+
+        .vr-text-upper-page2{
+            position: absolute;
+            font-size: 15px;
+            z-index: 2;
+            top: 120%;
+            bottom: 0;
+            right: 5%;
+            transform-origin: 0 0;
+            transform: rotate(270deg);
+            /* writing-mode: vertical-rl; */
+        }
+
+        .vr-text-footer-page2{
+            position: absolute;
+            font-size: 15px;
+            z-index: 2;
+            top: 150%;
+            bottom: 0;
+            right: 5%;
+            transform-origin: 0 0;
+            transform: rotate(270deg);
+            /* writing-mode: vertical-rl; */
+        }
+
+        .page-header{
+            background-color: #E0FFFF;
+            box-shadow: 0 5px 20px grey;
+            display: flex;
+            justify-content: space-between;
+            vertical-align: middle;
+            /* padding-left: 80px; */
+            /* padding-right: 20px; */
+            box-shadow: 2px;
+            margin-top: 2px;
+        }
+
+        .page2-header-image{
+            width: 100%;
+            color: #E0FFFF;
+        }
+
+        .page-header-head{
+            text-align: center;
+        }
+
+        .second-header-logo{
+            float: right;
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        .tata-aig-logo{
+            width: 70px;
+            float: right;
+            text-align: right;
+        }
+
+        .main-middle-text{
+            margin-top: 40px;
+            margin-left: 50px;
+            margin-right: 60px;
+        }
+
+        .row{
+            display: flex;
+        }
+
+        .left{
+            width: 70%;
+        }
+
+        .right{
+            width: 30%;
+            margin-left: 5px;
+        }
+
+        .ads{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ads-dyk{
+            width: 80%;
+        }
+
+        .ads-online{
+            width: 80%;
+        }
+
+        .ads-helpline{
+            width: 55%;
+        }
+
+        .ads-sms{
+            width: 35%;
+        }
+
+        .subject{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .greetings{
+            /* text-align: justify; */
+            line-height: 22px;
+        }
+
+        .middle-table > table {
+            border-spacing: 0px;
+        }
+
+        .middle-table > th, td {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .table-head{
+            text-align: center;
+            padding: 0 5px;
+        }
+
+        .after-table-text{
+            text-align: justify;
+        }
+
+        .points-para{
+            margin: 5px 0;
+        }
+
+        .text-box{
+            border: 1px solid black;
+            padding: 1.5px 1.5px;
+        }
+
+        .page-bottom-page2{
+            /* min-height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            margin-top: 257px;
+        }
+
+        .footer-pink-page2{
+            background: pink;
+            padding-left: 51px;
+            padding-right: 65px;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        .checkbox{
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            background-color: #fff;
+        }
+
+        .checkbox-text{
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .policy{
+            margin-left: 30px;
+            display: inline-block;
+        }
+
+        .white-box-page2{
+            background-color: #fff;
+            margin-top: 10px;
+            padding: 3px 5px;
+            width: 300px;
+            display: inline-block;
+        }
+
+        .personal-details{
+            margin-top: 15px;
+        }
+
+        .footer-box{
+            margin-top: 15px;
+        }
+
+        .page2-box{
+            padding-bottom: 20px;
+        }
+
+        .blank-page2{
+            margin-left: 10px;
+        }
+
+        .signature{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="first-page" style="border: 2px solid;">
+            <div class="vr-text-upper">
+                Premier -   MediCare UIN: TATHLIP21253V022021
+            </div>
+            <div class="vr-text-footer">
+                TAGIC/RN/TGMC/May 19/27 Ver1/ All 1508
+            </div>
+            <div class="top-line">
+                To open insert finger & gently slide it horizontally. =>
+            </div>
+            <div class="header">
+                <div>
+                    <div class="header-logo">
+                        <img class="tata-logo" src="{{resourcePath}}/images/Tata-Logo-03.svg" alt="Tata AIG Logo">
+                    </div>
+                </div>
+                <div class="header-text">
+                    <div class="header-top">
+                        INLAND LETTER CARD
+                    </div>
+                    <div class="header-middle">
+                        Renewal Notice
+                    </div>
+                    <div class="header-bottom">
+                        MediCare
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="column-page-1" style="font-size: 15px;">
+                        SpeedPost--AWB <br/>
+                        Dear {{name}}<br/>
+                        <p class="mobile">Mobile: {{mobile}}</p>
+                    </div>
+                    <div class="column-page-1">
+                        <div class="page1-details" style="font-size: 15px;">
+                            Branch Name: {{branchName}} <br/>
+                            Producer Name: TAGIC <br/>
+                            Producer Code: {{producerCode}} <br/>
+                            Producer Contact: <br/>
+                            RN Generation Date: {{rnGenerationDate}} <br/>
+                            Renewal Reference No: {{renewalReferenceNo}}<br/>
+                        </div>
+                        <div class="website-images row-website">
+                            <div class="tata-extended-logo page1-details column-page-1-website">
+                                <img class="tata-website-logo" src="{{resourcePath}}/images/Icon_6-03.svg" alt="tataaig.com"><br>
+                                <img class="tata-extended-logo-parts first-part" src="{{resourcePath}}/images/Icon_1-03.svg" alt="something">
+                                <img class="tata-extended-logo-parts" src="{{resourcePath}}/images/Icon_2-03.svg" alt="something">
+                                <img class="tata-extended-logo-parts" src="{{resourcePath}}/images/Icon_3-03.svg" alt="something">
+                                <img class="tata-extended-logo-parts" src="{{resourcePath}}/images/Icon_4-03.svg" alt="something">
+                                <img class="tata-extended-logo-parts" src="{{resourcePath}}/images/Icon_5-03.svg" alt="something">
+                            </div>
+                            <div class="vr-think-ahead column-page-1-website-line">
+                                <div class="website-vr">
+                                    
+                                </div>
+                            </div>
+                            <div class="website-think-ahead column-page-1-website">
+                                think ahead
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-middle">
+                <div class="empty-space"></div>
+            </div>
+
+            <div class="page-bottom">
+                <footer class="footer-page1">
+                    <div class="warn-text">
+                        <div>
+                            Insurance is a subject matter of solicitation. For more details on benefits, exclusions, limitations, terms and conditions, please refer sales brochure/policy wordings carefully, before concluding a sale.
+                        </div>
+                        <div>
+                            <b>Tata AIG General Insurance Company Limited</b> Registered Office: Peninsula Business Park, Tower A, 15th Floor, G. K. Marg, Lower Parel, Mumbai - 400 013, Maharashtra, India. <br>
+                            IRDA of India Registration No: 108    CIN: U85110MH2000PLC128425    PAN: AABCT3518Q    UIN No: TATHLIP21253V022021.
+                        </div>
+                    </div>
+                    <div class="footer-pink">
+                        <div class="footer-header">
+                            <div class="header-head" style="font-size: 15px;">
+                                Policy Renewal Slip
+                            </div>
+                            <div class="footer-header-text">
+                                Please fill this slip and send it to Tata AIG General Insurance Company Ltd., PO Box No. 27707, Malad (East), Mumbai - 400 097, Maharashtra, India. Call 24x7 Toll Free Helpline 1800-266-7780<br/>
+                                    (*Toll Free from MTNL/BSNL lines only) for any guidance.
+                            </div>
+                        </div>
+                        <div class="footer-payment">
+                            <div style="font-size: 12.5px;">
+                                My payment details are as follows:
+                            </div>
+                            <div class="white-box">
+                                <div class="payment-text" style="font-size: 12.5px;">
+                                    I wish to renew my MediCare Policy Number:______________________ and also to authorize the debit of Premium Amount:` _________ ` through Cheque No.: _____________ Dated:_____________ Name of Bank:___________________ Branch:___________________ Sources of Funds : _____ Salary _____ Business _____ Others (Specify) :__________ If you pay by Credit Card, call 24x7 Toll Free Helpline 1800-266-7780
+                                </div>
+                            </div>
+                            <div class="payment-imp" style="font-size: 12.5px;">
+                                Please draw your cheque / DD in favour of Tata AIG General Insurance Company Limited. For any assistance call us on 24x7 Toll Free Helpline 1800 266 7780 See reverse toverify and correct your policy details.
+                            </div>
+                            <div style="font-size: 12.5px;">
+                                Commencement of risk cover under the policy is subject to receipt of payable premium by Tata AIG General Insurance Company Limited
+                            </div>
+                            <div style="font-size: 12.5px;">
+                                Other details:
+                            </div>
+                            <div class="white-box">
+                                <div class="pan-text" style="font-size: 12.5px;">
+                                    Insured's PAN Card Number: ________________ Identification card: Type _____________________ Number:___________________ Please provide documentary address proof.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aml-clause">
+                            <div class="aml-text" style="font-size: 12.5px;">
+                                <span class="aml-head"><b>AML Clause:</b></span>I/We hereby confirm that all premiums have been/will be paid from bonafide sources and no premiums have been/will be paid out of proceeds of crime related to any ofthe offence listed in Prevention of Money Laundering Act, 2002. I understand that the Company has the right to call for documents to establish sources of funds. The insurance company hasright to cancel the insurance contract in case I am/have been found guilty by any competent court of law under any of the statutes, directly or indirectly governing the prevention of money laundering in India. 
+                            </div>
+                            <div class="aml-blanks" style="font-size: 12.5px;">
+                                Nationality :<span class="blank">_______ Indian</span><span class="blank">________ Non-Indian</span><span class="blank">If Non-Indian, please specify the Country :________________________________________</span>    
+                            </div>
+                        </div>
+                        <div class="laws">
+                            <div class="laws-header" style="font-size: 13px;">
+                                Section 41 of the Insurance Act, 1938 as amended by Insurance Laws (Amendment) Act, 2015 - Prohibition of Rebates
+                            </div>
+                            <div class="laws-points" style="font-size: 12.5px;">
+                                1. No person shall allow or offer to allow either directly or indirectly as an inducement to any person to take out or renew or continue an insurance in respect of any kind of risk relating to livesor property in India, any rebate of the whole or part of the commission payable or any rebate of premium shown on the policy, nor shall any person taking out or renewing or continuing apolicy accept any rebate, except such rebate as may be allowed in accordance with the published prospectus or tables of the insurer.
+                            </div>
+                            <div class="laws-points" style="font-size: 12.5px;">2. Any person making default in complying with the provisions of this section shall be liable for penalty which may extend to ten lakh rupees.</div>
+                            <div class="laws-points" style="font-size: 12.5px;">
+                                I/We hereby declare and warrant that all of the statement/details mentioned above are true and complete. If it is found that any particulars stated above are incorrect or untrue in anyrespect, I/We hereby acknowledge that insurer shall incur no liability for any insurance coverage.
+                            </div>
+                        </div>
+                        <div class="footer-table">
+                            <table>
+                                <tr style="font-size: 12.5px;">
+                                    <th>Signature</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr style="font-size: 12.5px;">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>DD/MM/YYYY</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="page-footer">
+                            <div class="page-footer-head">
+                                Tata AIG General Insurance Company Limited
+                            </div>
+                            <div class="page-footer-text" style="font-size: 12.5px;">
+                                <span class="page-footer-head">Registered Office: </span>Peninsula Business Park, Tower A, 15th Floor, G. K. Marg, Lower Parel, Mumbai - 400 013, Maharashtra, India. <br>
+                                24x7 Toll Free No: 1800 266 7780 or 1800 22 9966 (Senior Citizens) Email: customersupport@tataaig.com Website: www.tataaig.com <br>
+                                IRDA of India Registration No: 108 CIN: U85110MH2000PLC128425 PAN: AABCT3518Q GST No.: 27AABCT3518Q1ZW UIN No: TATHLIP21253V022021.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- <div class="vr-text-upper-page2">
+            Premier -   MediCare UIN: TATHLIP21253V022021
+        </div>
+        <div class="vr-text-footer-page2">
+            TAGIC/RN/TGMC/May 19/27 Ver1/ All 1508
+        </div> -->
+        <div class="second-page" style="border: 2px solid;">
+            <div class="dotted-page2-first"></div>
+            <div class="dotted-page2-second"></div>
+            <div class="page-header">
+                <!-- <div class="medicare-logo"></div>
+                <div class="page-header-head">
+                    <h1>Renewal Notice</h1> 
+                </div>
+                <div class="second-header-logo">
+                    <img class="tata-aig-logo" src="{{resourcePath}}/images/Tata-Logo-03.svg" alt="Tata AIG Logo">
+                </div> -->
+                <img class="page2-header-image" src="{{resourcePath}}/images/Heder_Medicare Plus-03.svg" alt="">
+            </div>
+            <div class="main-middle-text">
+                <div class="row">
+                    <div class="column left" style="font-size: 12.5px;">
+                        <div class="upper-text" style="line-height: 10px;">
+                            Dear: {{name}} <br>
+                            <div class="subject" style="line-height: 10px;">
+                                <b>Subject: Renewal intimation of your MediCare policy no. {{policyNo}}.</b>
+                            </div>
+                            <div class="greetings" style="line-height: 13px;">Greetings from TATA AIG General Insurance Company Limited. Thank you for choosing us as your preferred Health Insurance partner <br>
+                                    Your MediCare Policy is due for renewal on <b>{{renewalDueDate}}.</b> Please renew your policy before the expiry date to continue enjoying your existing benefits. <br>
+                                    We look forward to a long and healthy relationship with you and your family.
+                            </div>     
+                        </div>
+                        <div class="middle-table">
+                            <table>
+                                <tr class="table-head">
+                                    <th colspan="2">Your Policy Details</th>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><b>Policy No.</b></td>
+                                    <td>{{policyNo}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><b>Renewal Due Date</b></td>
+                                    <td>{{renewalDueDate}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><b>Net Renewal Premium</b></td>
+                                    <td>{{netRenewalPremium}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><b>GST @18%</b></td>
+                                    <td>{{gst}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><b>Gross Renewal Premium</b></td>
+                                    <td>{{grossRenewalPremium}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="last-table" id="last-tab">
+                            {{#equalsHelper PolicyType "Individual"}}
+                            <table>
+                                <thead>
+                                    <tr class="table-head" height="100px">
+                                        <th width="20%">Name of the Insured Member</th>
+                                        <th>Date of Birth</th>
+                                        <th width="10%">Relationship with Policyholder</th>
+                                        <th>Cumulatice Bonus(Rs.)</th>
+                                        <th>Existing Sum Insured(Rs.)</th>
+                                        <th>Enhanced Sum Insured(Rs.)</th>
+                                        <th>Enhanced Sum Insured With Accidental Death Benefit(Rs.)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <div>
+                                        {{#each members}}
+                                        <tr>
+                                            {{#each this}}
+                                            <td>{{this}}</td>
+                                            {{/each}}
+                                        </tr>
+                                        {{/each}}
+                                        <tr>
+                                            <th height="20px" colspan="4">Premium</th>
+                                            {{#each Premium}}
+                                            <td>{{this}}</td>
+                                            {{/each}}
+                                        </tr>
+                                    </div>
+                                </tbody>
+                                <!-- <tr class="table-head" height="100px">
+                                    <th width="20%">Name of the Insured Member</th>
+                                    <th>Date of Birth</th>
+                                    <th width="10%">Relationship with Policyholder</th>
+                                    <th>Cumulatice Bonus(Rs.)</th>
+                                    <th>Existing Sum Insured(Rs.)</th>
+                                    <th>Enhanced Sum Insured(Rs.)</th>
+                                    <th>Enhanced Sum Insured With Accidental Death Benefit(Rs.)</th>
+                                </tr>
+                                <tr>
+                                    <td>{{members.[0].name}}</td>
+                                    <td>{{members.[0].dob}}</td>
+                                    <td>{{members.[0].relation}}</td>
+                                    <td rowspan="3">{{cumulativeBonus}}</td>
+                                    <td rowspan="3">{{existingSumInsured.[0]}}</td>
+                                    <td rowspan="3">{{enhancedSumInsured.[0]}}</td>
+                                    <td rowspan="3">{{enhancedSumInsuredWithAccidentalBenefit.[0]}}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{members.[1].name}}</td>
+                                    <td>{{members.[1].dob}}</td>
+                                    <td>{{members.[1].relation}}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{members.[2].name}}</td>
+                                    <td>{{members.[2].dob}}</td>
+                                    <td>{{members.[2].relation}}</td>
+                                </tr>
+                                <tr>
+                                    <th height="20px" colspan="4">Premium</th>
+                                    <td>{{existingSumInsured.[1]}}</td>
+                                    <td>{{enhancedSumInsured.[1]}}</td>
+                                    <td>{{enhancedSumInsuredWithAccidentalBenefit.[1]}}</td>
+                                </tr> -->
+                            </table>
+                            {{/equalsHelper}}
+                            {{#equalsHelper PolicyType "Floater"}}
+                            <table>
+                                <tr class="table-head" height="100px">
+                                    <th width="20%">Name of the Insured Member</th>
+                                    <th>Date of Birth</th>
+                                    <th width="10%">Relationship with Policyholder</th>
+                                    <th>Cumulatice Bonus(Rs.)</th>
+                                    <th>Existing Sum Insured(Rs.)</th>
+                                    <th>Enhanced Sum Insured(Rs.)</th>
+                                    <th>Enhanced Sum Insured With Accidental Death Benefit(Rs.)</th>
+                                </tr>
+                                {{#each members}}
+                                <tr>
+                                    <td>{{name}}</td>
+                                    <td>{{dob}}</td>
+                                    <td>{{relation}}</td>
+                                    {{#equalsHelper @index 0}}
+                                    <td rowspan={{../members.length}}>{{CumulativeBonus}}</td>
+                                    <td rowspan={{../members.length}}>{{ExistingSum}}</td>
+                                    <td rowspan={{../members.length}}>{{EnhancedSum}}</td>
+                                    <td rowspan={{../members.length}}>{{EnhancedAccidental}}</td>
+                                    {{/equalsHelper}}
+                                </tr>
+                                {{/each}}
+                                <tr>
+                                    <th height="20px" colspan="4">Premium</th>
+                                    {{#each Premium}}
+                                    <td>{{this}}</td>
+                                    {{/each}}
+                                </tr>
+                            </table>
+                            {{/equalsHelper}}
+                        </div>
+                        <div class="after-table-text">
+                            <div class="points-para">
+                                * Cumulative Bonus as mentioned in Policy Wordings. Cumulative Bonus (CB) given is as on 60 days prior to your policy expiry. Any claim registered after this, CB will be adjusted accordingly.
+                            </div>
+                            <div class="points-para">
+                                In case of family floater where the age of the dependent child is greater than 25 years, a separate renewal notice is sent.Please submit a separate proposal form for this member. Please note that suitable credit of continuity/waiting periods for all the applicable previous policy years would be extended in this new policy of the separated member.
+                            </div>
+                            <div class="points-para">
+                                Please pay your premium by cheque/DD/Pay Order drawn in favor of <b>'Tata AIG General Insurance Company Limited'.</b> <br>
+                                In case of any assistance, please reach us on our toll free no. 1800 266 7780/Senior Citizen toll free no. 1800 22 9966. Or you can write to us at customersupport@tataaig.com.
+                            </div>
+                            <div class="points-para">
+                                For TATA AIG General Insurance Company Limited
+                            </div>
+                            <div class="points-para">
+                                <img class="tata-logo" src="{{resourcePath}}/images/Tata-Logo-03.svg" alt="">
+                            </div>
+                            <div class="points-para">
+                                Signature
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="ads">
+                            <img  class="ads-dyk" src="{{resourcePath}}/images/Icon_7-03.svg" style="display: block;" alt=""><br>
+                            <div class="ads-text" style="font-size: 12.5px; display: block; font-weight: bold; margin-top: -15px;">Renew your policy in any 3 easy ways</div>
+                            <img  class="ads-online" src="{{resourcePath}}/images/Icon_8-03.svg" style="display: block;" alt=""><br>
+                            <div style="display: flex; margin-left: 20px; margin-top: -15px;">
+                                <img  class="ads-helpline" src="{{resourcePath}}/images/Icon_9-03.svg" style="display: block;" alt="">
+                                <img  class="ads-sms" src="{{resourcePath}}/images/Icon_10-03.svg" style="display: block; margin-left: 10px;" alt="">
+                            </div>
+                        </div>
+                        <div class="text-box" style="font-size: 12.5px; width: 100%;">
+                            <div class="box-text">
+                                <b>General Exlusions:</b>
+                                <b>Medical Exclusions:</b> <br>
+                                􏱉Congenital External Diseases, defects or anomalies <br>
+                                􏱉 Admission primarily for diagnostic and evaluation purposes only <br>
+                                <b>Non-Medical Exclusions:</b> <br>
+                                􏱉 Intentional self-injury or attempted suicide while sane or insane. <br>
+                                􏱉 Any Insured Person attempting to commit a breach of law with criminal intent <br>
+                                􏱉 Any Insured Person’s participation or involvement in naval, military or air force operation, racing, diving, aviation, scuba diving, parachuting, hang-gliding, rock or mountain climbing Please refer to policy wordings for complete list of Benefits and Exclusions. <br>
+                                <b>Terms and Conditions:</b> <br>
+                                􏱉 The policy is lifelong renewable upon timely payment of premium. <br>
+                                􏱉 Grace period of 30 days from the policy expiry is available. Coverage is not available for the period for which no premium is received. <br>
+                                􏱉 Any product revision/modification/futur e withdrawal will be done with the approval of IRDAI and will be intimated to You atleast 3 months in advance. In case of withdrawal, you have an option to migrate to our similar health insurance product. 􏱉 Sum insured can be enhanced only at the time of renewal subject to Company’s underwriting guidelines & fresh waiting periods will be applicable on the enhanced sum insured. <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-bottom-page2">
+                <footer>
+                    <div class="footer-pink-page2">
+                        <div class="footer-header">
+                            <div class="header-head" style="font-size: 17px;">
+                                <b>Policy Renewal Slip</b>
+                            </div>
+                            <div class="footer-header-text" style="font-size: 15px;">
+                                Please fill this slip and send it to Tata AIG General Insurance Company Ltd., PO Box No. 27707, Malad (East), Mumbai - 400 097, Maharashtra, India. Call 24x7 Toll Free Helpline 1800-266-7780 (*Toll Free from MTNL/BSNL lines only) for any guidance.
+                            </div>
+                        </div>
+                        <div class="footer-payment">
+                            <div class="checkbox"></div>
+                            <div class="checkbox-text" style="font-size: 15px;">
+                                <b>Yes ! I would like to renew my policy as per given details below !</b>
+                            </div> <br>
+                            <div class="policy" style="font-size: 15px;">
+                            <h3>Policy No. :-</h3>
+                            </div>
+                            <div class="white-box-page2">
+                                <div class="payment-text" style="font-size: 15px;">
+                                   <b>{{policyNo}}</b>
+                                </div>
+                            </div>
+                            <!-- <div class="payment-imp">
+                                Please draw your cheque / DD in favour of Tata AIG General Insurance Company Limited. For any assistance call us on 24x7 Toll Free Helpline 1800 266 7780 See reverse toverify and correct your policy details.
+                            </div>
+                            <div>
+                                Commencement of risk cover under the policy is subject to receipt of payable premium by Tata AIG General Insurance Company Limited
+                            </div>
+                            <div>
+                                Other details:
+                            </div>
+                            <div class="white-box">
+                                <div class="pan-text">
+                                    Insured's PAN Card Number: ________________ Identification card: Type _____________________ Number:___________________ Please provide documentary address proof.
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="personal-details" style="font-size: 15px;">
+                            Personal Details - Please give details in case of any change.
+                        </div>
+                        <div class="footer-box">
+                            <div class="text-box page2-box">
+                                <div class="box-text">
+                                    My New Address : ______________________________________________________________________________________________________________________________ <br>
+                                    Contact Number : _________________________ <span class="blank-page2">Mobile ____________________ </span> <span class="blank-page2">Email-ID _________________________</span> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signature" style="font-size: 15px;">
+                            <h3>Customer's Signature</h3>
+                        </div>
+                        <div class="page-footer">
+                            <div class="page-footer-head" style="font-size: 15px;">
+                                Tata AIG General Insurance Company Limited
+                            </div>
+                            <div class="page-footer-text" style="font-size: 15px;">
+                                <span class="page-footer-head">Registered Office: </span>Peninsula Business Park, Tower A, 15th Floor, G. K. Marg, Lower Parel, Mumbai - 400 013, Maharashtra, India. <br>
+                                24x7 Toll Free No: 1800 266 7780 or 1800 22 9966 (Senior Citizens) Email: customersupport@tataaig.com Website: www.tataaig.com
+                                IRDA of India Registration No: 108 CIN: U85110MH2000PLC128425 PAN: AABCT3518Q GST No.: 27AABCT3518Q1ZW UIN No: TATHLIP21253V022021.
+                            </div>
+                            <!-- "members":[
+            {
+                "name": "hdffhf",
+                "dob": "03/02/1995",
+                "relation": "spouse"
+            },
+            {
+                "name": "hdffhf",
+                "dob": "03/02/1995",
+                "relation": "spouse"
+            },
+            {
+                "name": "hdffhf",
+                "dob": "03/02/1995",
+                "relation": "spouse"
+            }
+        ],
+        "cumulativeBonus": "5,00,000",
+        "existingSumInsured":[
+            "10,00,000",
+            "Rs. 4,301.12"
+        ],
+        "enhancedSumInsured": [
+            "0",
+            "Rs. 0"
+        ],
+        "enhancedSumInsuredWithAccidentalBenefit": [
+            "15,00,000",
+            "Rs. 0"
+        ] -->
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        console.log(lengthSpan);
+        var data = '{"result":{"buildname1":[{"table1":["xxx","yyy", "zzz"]},{"table2":["xxx","yyy"]}],"buildname2":[{"table1":["xxx","yyy", "zzz"]},{"table2":["xxx","yyy"]},{"table3":["xxx","yyy"]}], "buildname3":[{"table1":[]},{"table2":["xxx","yyy"]},{"table3":[]}], "buildname4":[]},"Build sets":"yyy","destinationPath":"xxx","status":1}';
+
+        function generateTable(data) { //data is the parsed JSON Object from an ajax request
+        data = JSON.parse(data);
+        $("#test-table tbody").empty(); //Empty the table first
+        Object.entries(data.result).forEach(([key, elem]) => {
+            var baseHtml = "";
+            var childrenHtml = "";
+            var maxRowSpan = 0;
+            elem.forEach((inner_elem, index) => {
+            var [innerElemKey, arr] = Object.entries(inner_elem)[0];
+            var elemRowSpan = Math.max(arr.length, 1);
+            maxRowSpan += elemRowSpan;
+
+            if (index !== 0) {
+                childrenHtml += "<tr>";
+            } 
+            childrenHtml += ('<td rowspan="' + elemRowSpan + '">' + innerElemKey + '</td>');
+            
+            arr.forEach((child, indx) => {
+                if (indx !== 0) {
+                childrenHtml += "</tr>";
+                }
+                childrenHtml += ('<td rowspan="1">' + child + '</td>' + '</tr>');
+            });
+            });
+            baseHtml += ('<tr><td rowspan="' + Math.max(maxRowSpan, 1) + '">' + key + '</td>');
+            $("#test-table").append(baseHtml + childrenHtml);
+        });
+        }
+
+        $(function() {
+        generateTable(data);
+        });
+    </script>
+</body>
+</html>

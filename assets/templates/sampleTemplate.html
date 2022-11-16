@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Sample Template</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div>
+        <h2>Members are:</h2>
+        <div>
+            <table>
+                <tr>
+                    <th>PAN</th>
+                    <th>Aadhaar</th>
+                    <th>Address</th>
+                </tr>
+                IF:( AND ( NE members NULL) ( NE members.length 0))
+                    <p>Data provided {{members.length}}</p>
+                IF_END
+
+                LOOP_START:members
+                <tr>
+                    <td>{{members.pan}}</td>
+                    <td>{{members.aadhaar}}</td>
+
+                    LOOP_START:members.address
+                        <td> {{members}} {{members.pan}} {{members.aadhaar}} {{members.address.pan}} {{members.address}} </td>   
+                    LOOP_END
+
+                    IF:( NE members.pan.length 10 )
+                        <p>Pan number incorrect (current length = {{members.pan.length}}) {{members.address.length}}</p>
+                    IF_END
+
+                    LOOP_START:members.address
+                        <td> {{members}} {{members.pan}} {{members.aadhaar}} {{members.address.pan}} {{members.address}} </td>  
+                    LOOP_END
+                </tr>
+                LOOP_END
+            </table>
+        </div>
+    </div>
+</body>
+</html>
