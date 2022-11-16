@@ -1,0 +1,62 @@
+{
+    "name": "docman",
+    "version": "1.0.0",
+    "description": "Document templating, creation, storage & retrieval services",
+    "main": "index.js",
+    "scripts": {
+        "format:check": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "lint": "eslint . --ext .js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clean": "rm -rf dist",
+        "build": "npm run clean && babel ./src --out-dir dist --copy-files",
+        "start": "export NODE_ENV=development && nodemon --exec babel-node src/index.js",
+        "prod": "export NODE_ENV=production && npm run build && node dist/index.js"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js}": [
+            "eslint --fix"
+        ]
+    },
+    "author": "Paras Wadhwa & Hardik Thami",
+    "license": "ISC",
+    "dependencies": {
+        "aws-sdk": "^2.1157.0",
+        "aws-xray-sdk-core": "^3.3.6",
+        "axios": "^0.27.2",
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "fs": "0.0.1-security",
+        "handlebars": "4.7.7",
+        "helmet": "^5.1.0",
+        "http": "0.0.1-security",
+        "joi": "^17.6.0",
+        "moment": "^2.29.3",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7",
+        "puppeteer": "15.2.0",
+        "winston": "^3.7.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.18.5",
+        "@babel/node": "^7.18.5",
+        "@babel/preset-env": "^7.18.2",
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
+        "eslint": "^8.18.0",
+        "eslint-config-prettier": "^8.5.0",
+        "husky": "^4.3.8",
+        "lint-staged": "^13.0.2",
+        "nodemon": "^2.0.16",
+        "prettier": "^2.7.1"
+    }
+}
